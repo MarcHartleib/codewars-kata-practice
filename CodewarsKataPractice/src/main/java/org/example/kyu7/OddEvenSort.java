@@ -7,6 +7,9 @@ import java.util.stream.IntStream;
 public class OddEvenSort {
 
     public String sortString(String sequence) {
+        if (sequence.equals(" ")) {
+            return sequence;
+        }
         String evenString = IntStream.range(0, sequence.length())
                 .filter(c -> c % 2 == 0)
                 .mapToObj(sequence::charAt)
